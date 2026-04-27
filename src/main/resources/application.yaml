@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gemini-api-pjt
+
+  # Spring AI - Google GenAI
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}      # 환경변수에서 읽음
+        chat:
+          options:
+            model: gemini-2.5-flash      # 가성비 모델
+            temperature: 0.7
+            max-output-tokens: 2048
+
+server:
+  port: 8080
+
+# CORS 설정 (프론트 주소)
+cors:
+  allowed-origins: http://localhost:5173
+
+logging:
+  level:
+    org.springframework.ai: DEBUG       # AI 호출 로그 자세히 보기

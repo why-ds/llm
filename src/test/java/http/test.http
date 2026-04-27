@@ -1,0 +1,15 @@
+### 일반 채팅 테스트
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "prompt": "안녕! 한 줄로 자기소개 해줘"
+}
+
+### 스트리밍 채팅 테스트
+POST http://localhost:8080/api/chat/stream
+Content-Type: application/json
+
+{
+  "prompt": "1부터 10까지 천천히 세어줘"
+}
